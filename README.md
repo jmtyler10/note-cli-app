@@ -17,6 +17,12 @@ A simple command-line note-taking application built with Node.js. Create, manage
 npm install
 ```
 
+**First-time setup:** Create your database file by copying the sample:
+
+```bash
+cp db.sample.json db.json
+```
+
 For global usage:
 
 ```bash
@@ -105,6 +111,8 @@ Notes are stored in `db.json` in the project root directory. Each note contains:
 - `id`: Timestamp-based unique identifier
 - `content`: The note text
 - `tags`: Array of tags associated with the note
+
+**Note:** `db.json` is gitignored to keep your personal notes private. See `db.sample.json` for the expected structure.
 
 ## Development
 

@@ -1,0 +1,19 @@
+{
+  "notes": [
+    {
+      "id": 1776175819667,
+      "content": "Example note demonstrating the basic structure",
+      "tags": ["example", "demo"]
+    },
+    {
+      "id": 1776175820123,
+      "content": "Buy groceries: milk, eggs, bread",
+      "tags": ["personal", "shopping"]
+    },
+    {
+      "id": 1776175821456,
+      "content": "Review pull request #42",
+      "tags": ["work", "code-review"]
+    }
+  ]
+}
