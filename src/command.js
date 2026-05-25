@@ -6,6 +6,7 @@ import {
   findNotes,
   removeNote,
   removeAllNotes,
+  editNote,
 } from "./notes.js";
 import { start } from "./server.js";
 
@@ -102,5 +103,25 @@ yargs(hideBin(process.argv))
       console.log("db reset");
     },
   )
+  .command(
+    "edit <id> <note>",
+    "edit a note by id",
+    (yargs) => {
+      return yargs
+        .positional("id", {
+          type: "number",
+          description: "The id of the note you want to edit",
+        })
+        .positional("note", {
+          type: "string",
+          description: "The new content for the note you want to edit",
+        });
+    },
+    async (argv) => {
+      const id = await editNote(argv.id, argv.note);
+      console.log(id);
+    },
+  )
+
   .demandCommand(1)
   .parse();

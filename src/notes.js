@@ -1,4 +1,6 @@
-import { insertDB, saveDB, getDB } from "./db.js";
+//todo: write single search function to reuse
+
+import { insertDB, saveDB, getDB, editDB } from "./db.js";
 
 export const newNote = async (note, tags) => {
   const newNote = {
@@ -32,6 +34,17 @@ export const removeNote = async (id) => {
     await saveDB({ notes: newNotes });
     return id;
   }
+};
+
+export const editNote = async (id, newContent) => {
+  const { notes } = await getDB();
+  const match = notes.find((note) => note.id === id);
+
+  if (match) {
+    await editDB(match, newContent);
+  }
+
+  return id;
 };
 
 export const removeAllNotes = () => {

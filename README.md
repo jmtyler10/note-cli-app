@@ -95,14 +95,14 @@ note clean
 
 ## Commands Reference
 
-| Command | Description | Options |
-|---------|-------------|---------|
-| `new <note>` | Create a new note | `-t, --tags` - Comma-separated tags |
-| `all` | Display all notes | - |
-| `find <filter>` | Search notes by content | - |
-| `remove <id>` | Remove a note by ID | - |
-| `web [port]` | Launch web interface | `port` - Port number (default: 5000) |
-| `clean` | Remove all notes | - |
+| Command         | Description             | Options                              |
+| --------------- | ----------------------- | ------------------------------------ |
+| `new <note>`    | Create a new note       | `-t, --tags` - Comma-separated tags  |
+| `all`           | Display all notes       | -                                    |
+| `find <filter>` | Search notes by content | -                                    |
+| `remove <id>`   | Remove a note by ID     | -                                    |
+| `web [port]`    | Launch web interface    | `port` - Port number (default: 5000) |
+| `clean`         | Remove all notes        | -                                    |
 
 ## Data Storage
 
@@ -141,11 +141,7 @@ npm test
 
 ## Roadmap
 
-The following features are planned as learning exercises to deepen Node.js skills:
-
 - [ ] **Filter notes by tag** - Build a `note tag <tagname>` command to list all notes with a specific tag. Practice array filtering and working with the existing tag system.
-
-- [ ] **Edit existing notes** - Create a `note edit <id> <new-content>` command to modify notes in place. Learn about updating data structures and working with command arguments.
 
 - [ ] **Todo system** - Implement a dedicated todo feature with `note todo <content>`, `note todos` to list all todos, and `note done <id>` to mark complete. Explore schema evolution and boolean flags.
 

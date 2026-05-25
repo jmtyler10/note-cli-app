@@ -17,3 +17,12 @@ export const insertDB = async (note) => {
   await saveDB(db);
   return note;
 };
+
+export const editDB = async (newNote, content) => {
+  const db = await getDB();
+  const update = db.notes.find((note) => note.id === newNote.id);
+
+  update.content = content;
+  await saveDB(db);
+  return newNote;
+};
